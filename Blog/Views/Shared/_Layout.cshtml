@@ -6,8 +6,13 @@
     <title>@ViewData["Title"]</title>
 </head>
 <body>
-
-@RenderBody()
-
+<div>
+    <a asp-controller="Home" asp-action="Index" >Home</a>
+    <a asp-controller="Home" asp-action="Post" >Post</a>
+    <a asp-controller="Home" asp-action="Edit" >Edit</a>
+</div>
+<div>
+    @RenderBody()
+</div>
 </body>
 </html>
