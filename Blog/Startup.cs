@@ -1,9 +1,9 @@
 using Blog.Data;
+using Blog.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blog
-{
-    public class Startup
+namespace Blog;
+public class Startup
     {
         private IConfiguration _config;
 
@@ -13,7 +13,8 @@ namespace Blog
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_config["DefaultConnection"]));   
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_config["DefaultConnection"]));
+            services.AddTransient<IRepository, Repository>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
@@ -32,5 +33,3 @@ namespace Blog
             // });
         }
     }
-}
-
