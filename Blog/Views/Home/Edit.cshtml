@@ -6,6 +6,7 @@
 
 <div>
     <form asp-controller="Home" asp-action="Edit" method="post">
+        <input asp-for="Id" type="hidden"/>
         <div>
             <label>Title</label>
             <input asp-for="Title"/>
@@ -14,6 +15,6 @@
             <label>Body</label>
             <input asp-for="Body"/>
         </div>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"/>
     </form>
 </div>
