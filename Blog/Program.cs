@@ -28,13 +28,13 @@ public static class Program
 
             if (!ctx.Users.Any(u => u.UserName == "admin"))
             {
-                //create an admi
+                //create an admin
                 var adminUser = new IdentityUser
                 {
                     UserName = "admin",
                     Email = "admin@test.com"
                 };
-                var result = userManager.CreateAsync(adminUser, "password");
+                var result = userManager.CreateAsync(adminUser, "password").GetAwaiter().GetResult();
                 //create a role
                 userManager.AddToRoleAsync(adminUser, adminRole.Name).GetAwaiter().GetResult();
             }

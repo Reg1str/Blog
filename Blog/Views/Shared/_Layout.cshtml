@@ -8,7 +8,8 @@
 <body>
 <div>
     <a asp-controller="Home" asp-action="Index" >Home</a>
-    <a asp-controller="Home" asp-action="Edit" >Create Post</a>
+    <a asp-controller="Panel" asp-action="Edit" >Create Post</a>
+    <a asp-controller="Panel" asp-action="Index" >Admin Panel</a>
     @if (User.Identity.IsAuthenticated)
     {
         <a asp-controller="Auth" asp-action="Logout" >Logout</a>

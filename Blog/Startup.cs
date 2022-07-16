@@ -2,7 +2,6 @@ using Blog.Data;
 using Blog.Data.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace Blog;
 public class Startup
@@ -26,6 +25,11 @@ public class Startup
                 })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Auth/Login";
+            });
             
             services.AddTransient<IRepository, Repository>();
             
