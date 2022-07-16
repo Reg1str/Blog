@@ -9,6 +9,14 @@
 <div>
     <a asp-controller="Home" asp-action="Index" >Home</a>
     <a asp-controller="Home" asp-action="Edit" >Create Post</a>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-controller="Auth" asp-action="Logout" >Logout</a>
+    }
+    else
+    {
+        <a asp-controller="Auth" asp-action="Login" >Sign In</a>
+    }
 </div>
 <div>
     @RenderBody()
