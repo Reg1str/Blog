@@ -38,7 +38,7 @@ public class HomeController : Controller
     }
     
     [HttpPost]
-    public async Task<IActionResult> Edit(Post post)
+    public async Task<IActionResult> Edit(Post? post)
     {
         if (post.Id > 0)
             _repository.UpdatePost(post);

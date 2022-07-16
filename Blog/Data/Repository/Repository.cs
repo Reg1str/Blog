@@ -26,7 +26,7 @@ public class Repository : IRepository
         _ctx.Posts.Add(post);
     }
 
-    public void UpdatePost(Post post)
+    public void UpdatePost(Post? post)
     {
         _ctx.Posts.Update(post);
     }
