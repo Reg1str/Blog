@@ -1,5 +1,6 @@
 using Blog.Data;
 using Blog.Data.Repository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog;
@@ -14,7 +15,13 @@ public class Startup
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_config["DefaultConnection"]));
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+            
             services.AddTransient<IRepository, Repository>();
+            
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
@@ -24,12 +31,9 @@ public class Startup
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
             
             app.UseMvcWithDefaultRoute();
-            
-            // app.Run(async (context) =>
-            // {
-            //     await context.Response.WriteAsync("Hello World!");
-            // });
         }
     }

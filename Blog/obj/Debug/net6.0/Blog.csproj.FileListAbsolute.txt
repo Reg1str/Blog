@@ -56,3 +56,13 @@ C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\runtimes\win\lib\netcore
 C:\Users\socol\RiderProjects\Blog\Blog\obj\Debug\net6.0\Blog.csproj.CopyComplete
 C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Humanizer.dll
 C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Blog.staticwebassets.runtime.json
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\socol\RiderProjects\Blog\Blog\obj\Debug\net6.0\Blog.MvcApplicationPartsAssemblyInfo.cs
