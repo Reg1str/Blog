@@ -34,8 +34,8 @@ public static class Program
                     UserName = "admin",
                     Email = "admin@test.com"
                 };
-                var result = userManager.CreateAsync(adminUser, "password").GetAwaiter().GetResult();
-                //create a role
+                userManager.CreateAsync(adminUser, "password").GetAwaiter().GetResult();
+                
                 userManager.AddToRoleAsync(adminUser, adminRole.Name).GetAwaiter().GetResult();
             }
         }
