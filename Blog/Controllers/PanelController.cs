@@ -39,7 +39,8 @@ public class PanelController : Controller
             {
                 Id = post.Id,
                 Title = post.Title,
-                Body = post.Body
+                Body = post.Body,
+                CurrentImage = post.Image
             });
         }
     }
@@ -54,6 +55,12 @@ public class PanelController : Controller
             Body = postViewModel.Body,
             Image = await _fileManager.SaveImage(postViewModel.Image)
         };
+
+        if (postViewModel.Image == null)
+            post.Image = postViewModel.CurrentImage;
+        else
+            post.Image = await _fileManager.SaveImage(postViewModel.Image);
+        
             
         if (post.Id > 0)
             _repository.UpdatePost(post);

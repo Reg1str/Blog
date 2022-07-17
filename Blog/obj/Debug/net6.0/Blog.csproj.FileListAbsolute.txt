@@ -66,3 +66,4 @@ C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.Extensions.Ide
 C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\socol\RiderProjects\Blog\Blog\obj\Debug\net6.0\Blog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\socol\RiderProjects\Blog\Blog\bin\Debug\net6.0\NUglify.dll

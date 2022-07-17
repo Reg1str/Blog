@@ -67,6 +67,18 @@
             "Microsoft.Identity.Client": {
               "target": "Package",
               "version": "[4.45.0, )"
+            },
+            "NUglify": {
+              "target": "Package",
+              "version": "[1.20.0, )"
+            },
+            "Trumbowyg": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [
