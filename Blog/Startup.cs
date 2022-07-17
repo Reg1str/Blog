@@ -1,4 +1,5 @@
 using Blog.Data;
+using Blog.Data.FileManager;
 using Blog.Data.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +33,7 @@ public class Startup
             });
             
             services.AddTransient<IRepository, Repository>();
+            services.AddTransient<IFileManager, FileManager>();
             
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
@@ -42,9 +44,10 @@ public class Startup
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseAuthentication();
+            app.UseStaticFiles();
             
+            app.UseAuthentication();
+
             app.UseMvcWithDefaultRoute();
         }
     }
