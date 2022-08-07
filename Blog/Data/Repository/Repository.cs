@@ -20,6 +20,13 @@ public class Repository : IRepository
     {
         return _ctx.Posts.ToList();
     }
+    
+    public List<Post?> GetAllPosts(string category)
+    {
+        Func<Post, bool> inCategory = (post) => post.Category.ToLower().Equals(category.ToLower());
+        
+        return _ctx.Posts.Where(post => post.Category.Equals(category)).ToList();
+    }
 
     public void AddPost(Post? post)
     {

@@ -40,7 +40,10 @@ public class PanelController : Controller
                 Id = post.Id,
                 Title = post.Title,
                 Body = post.Body,
-                CurrentImage = post.Image
+                CurrentImage = post.Image,
+                Description = post.Description,
+                Tags = post.Tags,
+                Category = post.Category
             });
         }
     }
@@ -53,7 +56,9 @@ public class PanelController : Controller
             Id = postViewModel.Id,
             Title = postViewModel.Title,
             Body = postViewModel.Body,
-            Image = await _fileManager.SaveImage(postViewModel.Image)
+            Description = postViewModel.Description,
+            Tags = postViewModel.Tags,
+            Category = postViewModel.Category
         };
 
         if (postViewModel.Image == null)
