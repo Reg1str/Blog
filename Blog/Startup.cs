@@ -41,8 +41,10 @@ public class Startup
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
             }
+            
+            app.UseDeveloperExceptionPage();
+            
             app.UseStaticFiles();
             
             app.UseAuthentication();

@@ -30,6 +30,13 @@
     <ItemGroup>
       <Content Include="wwwroot\lib\Trumbowyg-main\.github\FUNDING.yml" />
       <Content Include="wwwroot\lib\Trumbowyg-main\.github\ISSUE_TEMPLATE.md" />
+      <Content Include="wwwroot\lib\Trumbowyg-main\Trumbowyg-main\.github\FUNDING.yml" />
+      <Content Include="wwwroot\lib\Trumbowyg-main\Trumbowyg-main\.github\ISSUE_TEMPLATE.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Properties\PublishProfiles\Web Deploy Package.pubxml" />
+      <None Remove="Properties\PublishProfiles\Web Deploy to local IIS.pubxml" />
     </ItemGroup>
 
 </Project>

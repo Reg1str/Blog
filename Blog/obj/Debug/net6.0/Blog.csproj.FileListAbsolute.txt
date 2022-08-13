@@ -136,3 +136,4 @@ C:\Users\Nikonov\RiderProjects\Blog\Blog\obj\Debug\net6.0\refint\Blog.dll
 C:\Users\Nikonov\RiderProjects\Blog\Blog\obj\Debug\net6.0\Blog.pdb
 C:\Users\Nikonov\RiderProjects\Blog\Blog\obj\Debug\net6.0\Blog.genruntimeconfig.cache
 C:\Users\Nikonov\RiderProjects\Blog\Blog\obj\Debug\net6.0\ref\Blog.dll
+C:\Users\Nikonov\RiderProjects\Blog\Blog\bin\Debug\net6.0\appsettings.production.json
