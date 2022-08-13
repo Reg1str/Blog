@@ -8,41 +8,41 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Blog
 build_property.RootNamespace = Blog
-build_property.ProjectDir = C:\Users\socol\RiderProjects\Blog\Blog\
+build_property.ProjectDir = C:\Users\Nikonov\RiderProjects\Blog\Blog\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\socol\RiderProjects\Blog\Blog
+build_property.MSBuildProjectDirectory = C:\Users\Nikonov\RiderProjects\Blog\Blog
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/Auth/Login.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/Home/Index.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/Home/Post.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/Home/Post.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/Panel/Edit.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/Panel/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/Panel/Index.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/Panel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/Shared/_Layout.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/_ViewImports.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/socol/RiderProjects/Blog/Blog/Views/_ViewStart.cshtml]
+[C:/Users/Nikonov/RiderProjects/Blog/Blog/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

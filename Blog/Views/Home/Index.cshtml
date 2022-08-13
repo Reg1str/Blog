@@ -5,23 +5,11 @@
     ViewBag.Description = "This Blog has everything!";
     ViewBag.Keywords = "blog programing travel photography";
 }
-@*<h2>Home Page!</h2>
 
-<img src="content/static/ecc8608ebb9732b0a74cc79493f1a31f.jpeg" width="500"/>*@
 <div class="main-img">
     <span class="title">Amazing Blog Site</span>
 </div>
-<div class="container"> 
-    @* <ul> *@
-    @*     @foreach (var post in Model) *@
-    @*     { *@
-    @*         <li> *@
-    @*             <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id"> *@
-    @*                 @post.Title *@
-    @*             </a> *@
-    @*         </li> *@
-    @*     } *@
-    @* </ul> *@
+<div class="container">
     @foreach (var post in Model)
     {
         var imagePath = $"/Image/{post.Image}";

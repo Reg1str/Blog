@@ -2357,19 +2357,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\socol\\.nuget\\packages\\": {}
+    "C:\\Users\\Nikonov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\socol\\RiderProjects\\Blog\\Blog\\Blog.csproj",
+      "projectUniqueName": "C:\\Users\\Nikonov\\RiderProjects\\Blog\\Blog\\Blog.csproj",
       "projectName": "Blog",
-      "projectPath": "C:\\Users\\socol\\RiderProjects\\Blog\\Blog\\Blog.csproj",
-      "packagesPath": "C:\\Users\\socol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\socol\\RiderProjects\\Blog\\Blog\\obj\\",
+      "projectPath": "C:\\Users\\Nikonov\\RiderProjects\\Blog\\Blog\\Blog.csproj",
+      "packagesPath": "C:\\Users\\Nikonov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nikonov\\RiderProjects\\Blog\\Blog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\socol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Nikonov\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2442,7 +2442,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -2454,7 +2455,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
