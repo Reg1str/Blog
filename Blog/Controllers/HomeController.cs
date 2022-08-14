@@ -15,11 +15,16 @@ public class HomeController : Controller
         _repository = repository;
         _fileManager = fileManager;
     }
-    
-    public IActionResult Index(string category) => 
-        View(string.IsNullOrEmpty(category) ? 
-            _repository.GetAllPosts() : 
-            _repository.GetAllPosts(category));
+
+    public IActionResult Index(int pageNumber, string category)
+    {
+        if (pageNumber < 1)
+            return RedirectToAction("Index", new { pageNumber = 1, category});
+        
+        var indexViewModel = _repository.GetAllPosts(pageNumber, category);
+        
+        return View(indexViewModel);
+    }
 
     public IActionResult Post(int id) => 
             View(_repository.GetPost(id));

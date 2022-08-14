@@ -1,5 +1,6 @@
 ﻿using Blog.Models;
 using Blog.Models.Comments;
+using Blog.ViewModels;
 
 namespace Blog.Data.Repository;
 
@@ -7,7 +8,7 @@ public interface IRepository
 {
     Post? GetPost(int id);
     List<Post?> GetAllPosts();
-    List<Post?> GetAllPosts(string Category);
+    IndexViewModel GetAllPosts(int pageNumber, string Category);
     void AddPost(Post? post);
     void UpdatePost(Post? post);
     void RemovePost(int id);

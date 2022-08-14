@@ -1,6 +1,8 @@
 ﻿using Blog.Models;
 using Blog.Models.Comments;
+using Blog.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Blog.Data.Repository;
 
@@ -25,12 +27,31 @@ public class Repository : IRepository
     {
         return _ctx.Posts.ToList();
     }
-    
-    public List<Post?> GetAllPosts(string category)
+
+    public IndexViewModel GetAllPosts(int pageNumber, string category)
     {
         Func<Post, bool> inCategory = (post) => post.Category.ToLower().Equals(category.ToLower());
+        const int pageSize = 5;
+        var skipAmount = pageSize * (pageNumber - 1);
         
-        return _ctx.Posts.Where(post => post.Category.Equals(category)).ToList();
+        var query = _ctx.Posts.AsQueryable();
+
+        if (!String.IsNullOrEmpty(category))
+            query.Where(x => inCategory(x));
+        
+        var postsCount = query.Count();
+        
+        return new IndexViewModel
+        {
+            PageNumber = pageNumber,
+            NextPage = postsCount > skipAmount + pageSize,
+            Category = category,
+            Posts = query
+                .Skip(skipAmount)
+                .Take(pageSize)
+                .ToList()
+
+        };
     }
 
     public void AddPost(Post? post)
