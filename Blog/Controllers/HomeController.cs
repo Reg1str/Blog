@@ -1,5 +1,7 @@
 ﻿using Blog.Data.FileManager;
 using Blog.Data.Repository;
+using Blog.Models.Comments;
+using Blog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Controllers;
@@ -28,7 +30,43 @@ public class HomeController : Controller
             new FileStreamResult(
                 _fileManager.ImageStream(image), 
                 $"image/{image.Substring(image.LastIndexOf('.') + 1)}");
-    
+
+        [HttpPost]
+        public async Task<IActionResult> Comment(CommentViewModel commentViewModel)
+        {
+            if (!ModelState.IsValid)
+                return RedirectToAction("Post", new { id = commentViewModel.PostId});
+
+            var post = _repository.GetPost(commentViewModel.PostId);
+            if (commentViewModel.MainCommentId == 0)
+            {
+                post.MainComments = post.MainComments ?? new List<MainComment>();
+                
+                post.MainComments.Add(new MainComment
+                {
+                    Message = commentViewModel.Message,
+                    Created = DateTime.Now,
+                });
+                
+                _repository.UpdatePost(post);
+            }
+            else
+            {
+                var comment = new SubComment
+                {
+                    MainCommentId = commentViewModel.MainCommentId,
+                    Message = commentViewModel.Message,
+                    Created = DateTime.Now,
+                };
+                
+                _repository.AddSubComment(comment);
+            }
+
+            await _repository.SaveChangesAsync();
+            
+            return RedirectToAction("Post", new { id = commentViewModel.PostId});
+        }
+        
     // public IActionResult Index(string category)
     // {
     //     var posts = string.IsNullOrEmpty(category) ? _repository.GetAllPosts() : _repository.GetAllPosts(category);
