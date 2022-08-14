@@ -2,6 +2,7 @@ using Blog.Data;
 using Blog.Data.FileManager;
 using Blog.Data.Repository;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog;
@@ -34,7 +35,11 @@ public class Startup
             services.AddTransient<IRepository, Repository>();
             services.AddTransient<IFileManager, FileManager>();
             
-            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+                options.CacheProfiles.Add("Monthly", new CacheProfile {Duration = 60 * 60 * 24 * 7 * 4});
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
@@ -45,7 +50,7 @@ public class Startup
             
             app.UseDeveloperExceptionPage();
             
-            app.UseStaticFiles();
+            app.UseStaticFiles(); 
             
             app.UseAuthentication();
 

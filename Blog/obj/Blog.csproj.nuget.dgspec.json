@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[1.0.1, )"
             },
+            "WebEssentials.AspNetCore.PWA": {
+              "target": "Package",
+              "version": "[1.0.65, )"
+            },
             "jQuery": {
               "target": "Package",
               "version": "[3.6.0, )"

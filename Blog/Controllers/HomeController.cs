@@ -23,6 +23,7 @@ public class HomeController : Controller
             View(_repository.GetPost(id));
     
     [HttpGet("/Image/{image}")]
+    [ResponseCache(CacheProfileName = "Monthly")]
         public IActionResult Image(string image) => 
             new FileStreamResult(
                 _fileManager.ImageStream(image), 
