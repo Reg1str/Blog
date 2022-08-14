@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.IdentityModel.Tokens;
+using PhotoSauce.MagicScaler;
 
 namespace Blog.Data.FileManager;
 
@@ -16,6 +17,7 @@ public class FileManager : IFileManager
         return new FileStream(Path.Combine(_imagePath, image), FileMode.Open, FileAccess.Read);
     }
     
+    [Obsolete("Obsolete")]
     public async Task<string> SaveImage(IFormFile image)
     {
         try
@@ -35,8 +37,10 @@ public class FileManager : IFileManager
             var mime = image.FileName.Substring(image.FileName.LastIndexOf('.'));
             var fileName = $"img_{DateTime.Now:dd-MM-yyyy-HH-mm-ss}{mime}";
 
-            using var fileStream = new FileStream(Path.Combine(save_path, fileName), FileMode.Create);
-            await image.CopyToAsync(fileStream);
+            using( var fileStream = new FileStream(Path.Combine(save_path, fileName), FileMode.Create))
+            {
+                MagicImageProcessor.ProcessImage(image.OpenReadStream(), fileStream, ImageOptions());
+            }
 
             return fileName;
         }
@@ -61,6 +65,16 @@ public class FileManager : IFileManager
             Console.Write(e.Message);
             return false;
         }
-        
     }
+
+    [Obsolete("Obsolete")]
+    private ProcessImageSettings ImageOptions() => new ProcessImageSettings
+    {
+        Width = 800,
+        Height = 500,
+        ResizeMode = CropScaleMode.Crop,
+        SaveFormat = FileFormat.Jpeg,
+        JpegQuality = 100,
+        JpegSubsampleMode = ChromaSubsampleMode.Subsample420
+    };
 }
