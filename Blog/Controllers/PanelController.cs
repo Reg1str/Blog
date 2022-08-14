@@ -64,9 +64,13 @@ public class PanelController : Controller
         if (postViewModel.Image == null)
             post.Image = postViewModel.CurrentImage;
         else
+        {
+            if (!string.IsNullOrEmpty(postViewModel.CurrentImage))
+                _fileManager.RemoveImage(postViewModel.CurrentImage);
+
             post.Image = await _fileManager.SaveImage(postViewModel.Image);
-        
-            
+        }
+
         if (post.Id > 0)
             _repository.UpdatePost(post);
         else

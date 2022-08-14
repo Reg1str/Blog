@@ -19,14 +19,23 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
       <PackageReference Include="Microsoft.Identity.Client" Version="4.45.0" />
       <PackageReference Include="NUglify" Version="1.20.0" />
+      <PackageReference Include="PhotoSauce.MagicScaler" Version="0.13.1" />
       <PackageReference Include="Trumbowyg" Version="1.0.1" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Migrations" />
-      <Folder Include="wwwroot\content\blog" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Content Update="wwwroot/content/blog/*.*" CopyToPublishDirectory="Never" />
+        <Content Update="wwwroot/lib/**/*.*" CopyToPublishDirectory="Never" />
+        <Content Update="wwwroot/lib/**/dist/**/*.*" CopyToPublishDirectory="Always" />
+        <Content Update="appsettings.Development.json">
+          <DependentUpon>appsettings.json</DependentUpon>
+        </Content>
+    </ItemGroup>
+    
     <ItemGroup>
       <Content Include="wwwroot\lib\Trumbowyg-main\.github\FUNDING.yml" />
       <Content Include="wwwroot\lib\Trumbowyg-main\.github\ISSUE_TEMPLATE.md" />
@@ -35,11 +44,6 @@
       <Content Update="appsettings.Production.json">
         <DependentUpon>appsettings.json</DependentUpon>
       </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Remove="Properties\PublishProfiles\Web Deploy Package.pubxml" />
-      <None Remove="Properties\PublishProfiles\Web Deploy to local IIS.pubxml" />
     </ItemGroup>
 
 </Project>

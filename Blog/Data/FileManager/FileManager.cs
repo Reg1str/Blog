@@ -46,4 +46,21 @@ public class FileManager : IFileManager
             return "Error";
         }
     }
+
+    public bool RemoveImage(string image)
+    {
+        try
+        {
+            var file = Path.Combine(_imagePath, image);
+            if (File.Exists(file))
+                File.Delete(file);
+            return true;
+        }
+        catch (Exception e)
+        {
+            Console.Write(e.Message);
+            return false;
+        }
+        
+    }
 }

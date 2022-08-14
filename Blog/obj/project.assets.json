@@ -539,6 +539,15 @@
           "lib/net5.0/NUglify.dll": {}
         }
       },
+      "PhotoSauce.MagicScaler/0.13.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/PhotoSauce.MagicScaler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PhotoSauce.MagicScaler.dll": {}
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -1783,6 +1792,35 @@
         "nuglify.png"
       ]
     },
+    "PhotoSauce.MagicScaler/0.13.1": {
+      "sha512": "81XZ2yLrx8D8b3kwbAA1V2nZuo4GmLplqEYfV0mb2OMAaNQBtpyhAFujlpTwep9u760hyZZRVbBXT/MJj964eg==",
+      "type": "package",
+      "path": "photosauce.magicscaler/0.13.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "PhotoSauce.png",
+        "lib/net461/PhotoSauce.MagicScaler.dll",
+        "lib/net461/PhotoSauce.MagicScaler.xml",
+        "lib/net472/PhotoSauce.MagicScaler.dll",
+        "lib/net472/PhotoSauce.MagicScaler.xml",
+        "lib/net6.0/PhotoSauce.MagicScaler.dll",
+        "lib/net6.0/PhotoSauce.MagicScaler.xml",
+        "lib/net7.0/PhotoSauce.MagicScaler.dll",
+        "lib/net7.0/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp3.1/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp3.1/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.1/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.1/PhotoSauce.MagicScaler.xml",
+        "license",
+        "photosauce.magicscaler.0.13.1.nupkg.sha512",
+        "photosauce.magicscaler.nuspec",
+        "readme.md",
+        "third-party-notices"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -2352,6 +2390,7 @@
       "Microsoft.Extensions.DependencyInjection >= 6.0.0",
       "Microsoft.Identity.Client >= 4.45.0",
       "NUglify >= 1.20.0",
+      "PhotoSauce.MagicScaler >= 0.13.1",
       "Trumbowyg >= 1.0.1",
       "jQuery >= 3.6.0"
     ]
@@ -2426,6 +2465,10 @@
           "NUglify": {
             "target": "Package",
             "version": "[1.20.0, )"
+          },
+          "PhotoSauce.MagicScaler": {
+            "target": "Package",
+            "version": "[0.13.1, )"
           },
           "Trumbowyg": {
             "target": "Package",

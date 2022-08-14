@@ -72,6 +72,10 @@
               "target": "Package",
               "version": "[1.20.0, )"
             },
+            "PhotoSauce.MagicScaler": {
+              "target": "Package",
+              "version": "[0.13.1, )"
+            },
             "Trumbowyg": {
               "target": "Package",
               "version": "[1.0.1, )"

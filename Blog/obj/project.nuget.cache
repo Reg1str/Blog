@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0bB8Tb5S+2dJwb1dcaSj55c2ggOsx/klhqSE4Qgmqy7OpmIC3dopMbmcIPMnxWGX0YfKTZEVIUvsClJhL7ExKA==",
+  "dgSpecHash": "9ul7SiSqnp+RhyiHILw76GchsmVCS7MQgDeF5LnT/QVEjSn/RQnfBNixnln3bAtTtAZrvn6c8Hiyu16AxJODDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nikonov\\RiderProjects\\Blog\\Blog\\Blog.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,7 @@
     "C:\\Users\\Nikonov\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Nikonov\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Nikonov\\.nuget\\packages\\nuglify\\1.20.0\\nuglify.1.20.0.nupkg.sha512",
+    "C:\\Users\\Nikonov\\.nuget\\packages\\photosauce.magicscaler\\0.13.1\\photosauce.magicscaler.0.13.1.nupkg.sha512",
     "C:\\Users\\Nikonov\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Nikonov\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Nikonov\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
