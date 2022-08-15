@@ -18,7 +18,7 @@
         {
             @if (User.IsInRole("Admin"))
             {
-                <a asp-controller="Home" asp-action="Index" asp-route-category="Panel">Admin Panel</a>
+                <a asp-controller="Panel" asp-action="Index" asp-route-category="Panel">Admin Panel</a>
             }
             <a asp-controller="Auth" asp-action="Logout">Logout</a>
         }
