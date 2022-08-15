@@ -21,16 +21,25 @@
             </span>
         </a>
     }
-    <div class="pages-buttons">
+    <div class="pages">
         @if (Model.PageNumber > 1)
         {
             <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category"
-               asp-route-pageNumber="@(Model.PageNumber - 1)" class="previous-page">Previous Page</a>
+               asp-route-pageNumber="@(Model.PageNumber - 1)" class="previous-page">&#60</a>
         }
+        
+        @for (var i = 1; i <= Model.PageCount; i++ )
+        {
+            var activeClass = i == Model.PageNumber ? "page-number active" : "page-number";
+
+            <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category"
+                              asp-route-pageNumber="@i" class="@activeClass">@i</a>
+        }
+        
         @if (Model.NextPage)
         {
             <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category"
-               asp-route-pageNumber="@(Model.PageNumber + 2)" class="next-page">Next Page</a>
+               asp-route-pageNumber="@(Model.PageNumber + 1)" class="next-page">&#62</a>
         }
     </div>
 </div>

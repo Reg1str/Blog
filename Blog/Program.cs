@@ -22,13 +22,11 @@ public static class Program
             var adminRole = new IdentityRole("Admin");
             if (!ctx.Roles.Any())
             {
-                //create a role
                 roleManager.CreateAsync(adminRole).GetAwaiter().GetResult();
             }
 
             if (!ctx.Users.Any(u => u.UserName == "admin"))
             {
-                //create an admin
                 var adminUser = new IdentityUser
                 {
                     UserName = "admin",

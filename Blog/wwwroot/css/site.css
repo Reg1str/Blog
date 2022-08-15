@@ -123,3 +123,35 @@ nav a {
 .comment-input{
     border: 0;
 }
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.pages a{
+    background-color: #aaa;
+    color: white;
+    padding: 1rem;
+    border: 1px solid #eee;
+    margin: 0 0.25rem;
+}
+
+.pages a:hover {
+    background-color: #999;
+    text-decoration: none;
+}
+
+.pages a.active{
+    background-color: #ccc;
+}
+
+.previous-page{
+    
+}
+
+.next-page{
+    
+}
