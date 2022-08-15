@@ -134,7 +134,7 @@ nav a {
 .pages a{
     background-color: #aaa;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem 0.75rem;
     border: 1px solid #eee;
     margin: 0 0.25rem;
 }
@@ -154,4 +154,9 @@ nav a {
 
 .next-page{
     
+}
+
+.three-dots{
+    line-height: 1;
+    font-size: 24px;
 }
