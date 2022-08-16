@@ -9,6 +9,12 @@
 
 <div class="main-img">
     <span class="title">Amazing Blog Site</span>
+    <form asp-controller="Home" asp-action="Index" method="get">
+        <input type="hidden" name="pageNumber" value="@Model.PageNumber"/>
+        <input type="hidden" name="category" value="@Model.Category"/>
+        <input class="search" type="text" name="search" placeholder="Search"/>
+        <button class="search submit-btn"></button>
+    </form>
 </div>
 <div class="container">
     

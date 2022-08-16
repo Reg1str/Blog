@@ -28,17 +28,27 @@ public class Repository : IRepository
         return _ctx.Posts.ToList();
     }
 
-    public IndexViewModel GetAllPosts(int pageNumber, string category)
+    public IndexViewModel GetAllPosts(
+        int pageNumber,
+        string category,
+        string search)
     {
         Func<Post, bool> inCategory = (post) => post.Category.ToLower().Equals(category.ToLower());
         const int pageSize = 5;
         var skipAmount = pageSize * (pageNumber - 1);
         
-        var query = _ctx.Posts.AsQueryable();
+        var query = _ctx.Posts.AsNoTracking().AsQueryable();
 
         if (!String.IsNullOrEmpty(category))
             query.Where(x => inCategory(x));
+
+        if (!string.IsNullOrEmpty(search))
+            query = query.Where(x => EF.Functions.Like(x.Title,$"%{search}%")
+                                                                || EF.Functions.Like(x.Body,$"%{search}%")
+                                                                || EF.Functions.Like(x.Description,$"%{search}%")); 
         
+
+
         var postsCount = query.Count();
         var pageCount = (int)Math.Ceiling((double)postsCount / pageSize);
 
@@ -49,6 +59,7 @@ public class Repository : IRepository
             NextPage = postsCount > skipAmount + pageSize,
             Pages = PageHelper.PageNumbers(pageNumber, pageCount).ToList(),
             Category = category,
+            Search = search,
             Posts = query
                 .Skip(skipAmount)
                 .Take(pageSize)

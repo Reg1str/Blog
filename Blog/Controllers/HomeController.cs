@@ -16,12 +16,12 @@ public class HomeController : Controller
         _fileManager = fileManager;
     }
 
-    public IActionResult Index(int pageNumber, string category)
+    public IActionResult Index(int pageNumber, string category, string search)
     {
         if (pageNumber < 1)
             return RedirectToAction("Index", new { pageNumber = 1, category});
         
-        var indexViewModel = _repository.GetAllPosts(pageNumber, category);
+        var indexViewModel = _repository.GetAllPosts(pageNumber, category, search);
         
         return View(indexViewModel);
     }

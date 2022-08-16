@@ -4,7 +4,7 @@
     @if (Model.PageNumber > 1)
     {
         <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category"
-           asp-route-pageNumber="@(Model.PageNumber - 1)" class="previous-page">&#60</a>
+           asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber - 1)" class="previous-page">&#60</a>
     }
         
     @foreach(var p in Model.Pages)
@@ -25,6 +25,6 @@
     @if (Model.NextPage)
     {
         <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category"
-           asp-route-pageNumber="@(Model.PageNumber + 1)" class="next-page">&#62</a>
+          asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber + 1)" class="next-page">&#62</a>
     }
 </div>

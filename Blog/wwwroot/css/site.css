@@ -29,16 +29,18 @@ nav a {
     background-image: url("../content/static/ecc8608ebb9732b0a74cc79493f1a31f.jpeg");
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.title {
-    position: absolute;
+
+.main-img .title{
     color: white;
     font-size: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 35%;
     text-shadow: 0 0 8px #3e3a3b;
+    margin-bottom: 1rem;
 }
 
 .container {
@@ -53,6 +55,16 @@ nav a {
     display: flex;
     height: 400px;
     box-shadow: 0 0 5px 0 black;
+}
+
+.post .title {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
+    text-shadow: 0 0 8px #3e3a3b;
 }
 
 .post img {
@@ -173,4 +185,28 @@ nav a {
     max-width: 200px;
     width: 100%;
     margin-bottom: 1rem;
+}
+
+.search{
+    color: grey;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-bottom: 2px solid darkblue;
+}
+
+.search::placeholder {
+    color: grey;
+}
+
+.submit-btn{
+    display: none;
+}
+
+@media screen and (max-width: 768px)
+{
+    .submit-btn{
+        display: inline-block;
+    }
 }
