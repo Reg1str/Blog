@@ -210,3 +210,8 @@ nav a {
         display: inline-block;
     }
 }
+
+.edit {
+    display: flex;
+    flex-direction: column;
+}
